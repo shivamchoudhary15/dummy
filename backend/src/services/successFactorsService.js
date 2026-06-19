@@ -171,20 +171,34 @@ const generateMockData = (entityName, count = 100) => {
 
 export const successFactorsService = {
   /**
+   * Helper to filter cleaned records using XML metadata
+   */
+  filterCleanedData(dataset, entityName) {
+    const xmlProperties = getPropertiesFromXml(entityName);
+    if (!xmlProperties) return dataset;
+
+    return dataset.map(record => {
+      const filteredRecord = {};
+      for (const [key, val] of Object.entries(record)) {
+        if (
+          xmlProperties.has(key) || 
+          key === 'manager' || 
+          key === 'userId' || 
+          key === 'code' || 
+          key === 'externalCode' ||
+          key === 'name'
+        ) {
+          filteredRecord[key] = val;
+        }
+      }
+      return filteredRecord;
+    });
+  },
+
+  /**
    * Helper to make basic auth OData calls
    */
   async makeODataRequest(connection, endpoint, queryParams = {}) {
-    if (fs.existsSync(xmlPath)) {
-      console.log(`[SuccessFactors Offline Mode] Mocking OData request to ${endpoint}`);
-      if (endpoint === '/odata/v2/User') return generateMockData('User', queryParams.$top || 300);
-      if (endpoint === '/odata/v2/Position') return generateMockData('Position', queryParams.$top || 300);
-      if (endpoint === '/odata/v2/FODepartment') return generateMockData('FODepartment', queryParams.$top || 300);
-      if (endpoint === '/odata/v2/FOLocation') return generateMockData('FOLocation', queryParams.$top || 300);
-      if (endpoint === '/odata/v2/FODivision') return generateMockData('FODivision', queryParams.$top || 300);
-      if (endpoint === '/odata/v2/FOCompany') return generateMockData('FOCompany', queryParams.$top || 300);
-      return [];
-    }
-
     const { baseUrl, username, companyId, password } = connection;
     const url = `${baseUrl.replace(/\/$/, '')}${endpoint}`;
 
@@ -274,8 +288,9 @@ export const successFactorsService = {
       };
     });
 
-    setCache(companyId, 'User', cleanedUsers);
-    return this.processQueryResult(cleanedUsers, queryOptions);
+    const filteredUsers = this.filterCleanedData(cleanedUsers, 'User');
+    setCache(companyId, 'User', filteredUsers);
+    return this.processQueryResult(filteredUsers, queryOptions);
   },
 
   /**
@@ -331,8 +346,9 @@ export const successFactorsService = {
       };
     });
 
-    setCache(companyId, 'Position', cleanedPositions);
-    return this.processQueryResult(cleanedPositions, queryOptions);
+    const filteredPositions = this.filterCleanedData(cleanedPositions, 'Position');
+    setCache(companyId, 'Position', filteredPositions);
+    return this.processQueryResult(filteredPositions, queryOptions);
   },
 
   /**
@@ -365,8 +381,9 @@ export const successFactorsService = {
       lastModifiedBy: dept.lastModifiedBy || 'System'
     }));
 
-    setCache(companyId, 'Department', cleanedDepartments);
-    return this.processQueryResult(cleanedDepartments, queryOptions);
+    const filteredDepartments = this.filterCleanedData(cleanedDepartments, 'FODepartment');
+    setCache(companyId, 'Department', filteredDepartments);
+    return this.processQueryResult(filteredDepartments, queryOptions);
   },
 
   /**
@@ -399,8 +416,9 @@ export const successFactorsService = {
       locationGroup: loc.locationGroup || 'N/A'
     }));
 
-    setCache(companyId, 'Location', cleanedLocations);
-    return this.processQueryResult(cleanedLocations, queryOptions);
+    const filteredLocations = this.filterCleanedData(cleanedLocations, 'FOLocation');
+    setCache(companyId, 'Location', filteredLocations);
+    return this.processQueryResult(filteredLocations, queryOptions);
   },
 
   /**
@@ -432,8 +450,9 @@ export const successFactorsService = {
       createdBy: div.createdBy || 'System'
     }));
 
-    setCache(companyId, 'Division', cleanedDivisions);
-    return this.processQueryResult(cleanedDivisions, queryOptions);
+    const filteredDivisions = this.filterCleanedData(cleanedDivisions, 'FODivision');
+    setCache(companyId, 'Division', filteredDivisions);
+    return this.processQueryResult(filteredDivisions, queryOptions);
   },
 
   /**
@@ -465,8 +484,9 @@ export const successFactorsService = {
       description: comp.description || 'No Description'
     }));
 
-    setCache(companyId, 'Company', cleanedCompanies);
-    return this.processQueryResult(cleanedCompanies, queryOptions);
+    const filteredCompanies = this.filterCleanedData(cleanedCompanies, 'FOCompany');
+    setCache(companyId, 'Company', filteredCompanies);
+    return this.processQueryResult(filteredCompanies, queryOptions);
   },
 
   /**
