@@ -1,12 +1,14 @@
-import { Connection } from '../models/connection.js';
-import { Report } from '../models/report.js';
 import { successFactorsService } from '../services/successFactorsService.js';
 import { aggregationService } from '../services/aggregationService.js';
 import { nlpService } from '../services/nlpService.js';
 
+// In-memory data store for connection details and telemetry report history
+global.activeConnection = null;
+global.reportHistory = [];
+
 export const apiController = {
   /**
-   * Validate connection details and store them in MongoDB
+   * Validate connection details and store them in-memory
    */
   async connect(req, res) {
     try {
@@ -26,7 +28,8 @@ export const apiController = {
         companyId,
         username,
         password,
-        baseUrl: formattedBaseUrl
+        baseUrl: formattedBaseUrl,
+        createdAt: new Date()
       };
 
       console.log(`Validating connection for user ${username}@${companyId}...`);
@@ -42,34 +45,17 @@ export const apiController = {
         });
       }
 
-      // Connection succeeded, save to database
-      let connectionDoc;
-      try {
-        connectionDoc = await Connection.findOneAndUpdate(
-          { companyId, username },
-          { password, baseUrl: formattedBaseUrl, createdAt: new Date() },
-          { upsert: true, new: true }
-        );
-      } catch (dbError) {
-        console.warn('MongoDB not available. Connection validated but not persisted in database:', dbError.message);
-        // We can still return success and keep the connection in an in-memory variable for the session
-        connectionDoc = { companyId, username, baseUrl: formattedBaseUrl, createdAt: new Date() };
-      }
-
-      // Store in global process variable for easy in-memory access if DB is down
-      process.env.LAST_COMPANY_ID = companyId;
-      process.env.LAST_USERNAME = username;
-      // Temporary in-memory connection storage
+      // Save connection in-memory globally
       global.activeConnection = tempConnection;
 
       res.status(200).json({
         success: true,
         message: 'Successfully connected and verified SuccessFactors integration!',
         connection: {
-          companyId: connectionDoc.companyId,
-          username: connectionDoc.username,
-          baseUrl: connectionDoc.baseUrl,
-          createdAt: connectionDoc.createdAt
+          companyId: tempConnection.companyId,
+          username: tempConnection.username,
+          baseUrl: tempConnection.baseUrl,
+          createdAt: tempConnection.createdAt
         }
       });
 
@@ -83,26 +69,7 @@ export const apiController = {
    * Helper to retrieve active connection credentials
    */
   async getActiveConnection() {
-    // Check if we have one in memory
-    if (global.activeConnection) {
-      return global.activeConnection;
-    }
-
-    // Try finding the most recently updated connection in MongoDB
-    try {
-      const conn = await Connection.findOne().sort({ createdAt: -1 });
-      if (conn) {
-        return {
-          companyId: conn.companyId,
-          username: conn.username,
-          password: conn.password,
-          baseUrl: conn.baseUrl
-        };
-      }
-    } catch (error) {
-      console.error('Failed to read connection from DB:', error.message);
-    }
-    return null;
+    return global.activeConnection;
   },
 
   /**
@@ -181,23 +148,23 @@ export const apiController = {
 
       const result = aggregationService.aggregateData(data, groupBy, aggregation, numericField);
 
-      // Save report parameters in history for telemetry (if DB is active)
+      // Save report parameters in-memory for session tracking
       try {
         const firstRow = data[0];
         const isUserObj = firstRow && 'userId' in firstRow;
         const objectType = isUserObj ? 'User' : 'Position';
 
-        await Report.create({
+        global.reportHistory.push({
           objectType,
-          filters: {}, // If needed, can pass down filters
+          filters: {},
           chartType: req.body.chartType || 'bar',
           groupBy,
           aggregation,
           numericField,
           generatedAt: new Date()
         });
-      } catch (dbErr) {
-        // Ignore DB save errors to keep engine operational
+      } catch (err) {
+        // Safe catch
       }
 
       res.status(200).json(result);

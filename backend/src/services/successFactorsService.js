@@ -1,21 +1,10 @@
 import axios from 'axios';
-import { Cache } from '../models/cache.js';
 
-// In-memory cache fallback if MongoDB is not running
+// Pure in-memory cache configuration (replacing MongoDB cache)
 const memoryCache = new Map();
 const CACHE_TTL_MS = 5 * 60 * 1000; // 5 minutes
 
-const getCache = async (companyId, objectType) => {
-  try {
-    const cached = await Cache.findOne({ companyId, objectType });
-    if (cached && (Date.now() - new Date(cached.fetchedAt).getTime() < CACHE_TTL_MS)) {
-      return cached.data;
-    }
-  } catch (error) {
-    console.error('MongoDB Cache read failed, trying in-memory cache:', error.message);
-  }
-
-  // Fallback to memory cache
+const getCache = (companyId, objectType) => {
   const memKey = `${companyId}:${objectType}`;
   const memCached = memoryCache.get(memKey);
   if (memCached && (Date.now() - memCached.fetchedAt < CACHE_TTL_MS)) {
@@ -24,18 +13,7 @@ const getCache = async (companyId, objectType) => {
   return null;
 };
 
-const setCache = async (companyId, objectType, data) => {
-  try {
-    await Cache.findOneAndUpdate(
-      { companyId, objectType },
-      { data, fetchedAt: new Date() },
-      { upsert: true, new: true }
-    );
-  } catch (error) {
-    console.error('MongoDB Cache write failed, saving in-memory:', error.message);
-  }
-
-  // Save to in-memory cache
+const setCache = (companyId, objectType, data) => {
   const memKey = `${companyId}:${objectType}`;
   memoryCache.set(memKey, {
     data,
@@ -75,7 +53,7 @@ export const successFactorsService = {
     const { companyId } = connection;
 
     if (!forceRefresh) {
-      const cachedData = await getCache(companyId, 'User');
+      const cachedData = getCache(companyId, 'User');
       if (cachedData) {
         console.log(`Returning ${cachedData.length} cached users`);
         return this.processQueryResult(cachedData, queryOptions);
@@ -118,7 +96,7 @@ export const successFactorsService = {
       } : null
     }));
 
-    await setCache(companyId, 'User', cleanedUsers);
+    setCache(companyId, 'User', cleanedUsers);
 
     return this.processQueryResult(cleanedUsers, queryOptions);
   },
@@ -130,7 +108,7 @@ export const successFactorsService = {
     const { companyId } = connection;
 
     if (!forceRefresh) {
-      const cachedData = await getCache(companyId, 'Position');
+      const cachedData = getCache(companyId, 'Position');
       if (cachedData) {
         console.log(`Returning ${cachedData.length} cached positions`);
         return this.processQueryResult(cachedData, queryOptions);
@@ -161,7 +139,7 @@ export const successFactorsService = {
       standardHours: pos.standardHours ? Number(pos.standardHours) : 40
     }));
 
-    await setCache(companyId, 'Position', cleanedPositions);
+    setCache(companyId, 'Position', cleanedPositions);
 
     return this.processQueryResult(cleanedPositions, queryOptions);
   },

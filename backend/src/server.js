@@ -1,7 +1,6 @@
 import express from 'express';
 import cors from 'cors';
 import dotenv from 'dotenv';
-import { connectDB } from './config/db.js';
 import apiRoutes from './routes/apiRoutes.js';
 
 dotenv.config();
@@ -18,7 +17,7 @@ app.use('/api', apiRoutes);
 
 // Root path response
 app.get('/', (req, res) => {
-  res.json({ message: 'SF Insight SAP SuccessFactors Visualization API is running.' });
+  res.json({ message: 'SF Insight SAP SuccessFactors Visualization API is running (In-Memory Database-Free Mode).' });
 });
 
 // Error handling middleware
@@ -27,12 +26,7 @@ app.use((err, req, res, next) => {
   res.status(500).json({ success: false, message: err.message || 'Internal Server Error' });
 });
 
-// Connect database & start server
-const startServer = async () => {
-  await connectDB();
-  app.listen(PORT, () => {
-    console.log(`SF Insight Backend running on port ${PORT}`);
-  });
-};
-
-startServer();
+// Start Express server directly (database-free)
+app.listen(PORT, () => {
+  console.log(`SF Insight Backend running in in-memory mode on port ${PORT}`);
+});
