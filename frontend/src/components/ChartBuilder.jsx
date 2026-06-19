@@ -1,6 +1,6 @@
 import React, { useMemo } from 'react';
 import { useApp } from '../context/AppContext';
-import { BarChart3, Sliders } from 'lucide-react';
+import { BarChart3, Sliders, AlertCircle } from 'lucide-react';
 
 export const ChartBuilder = () => {
   const { 
@@ -19,7 +19,7 @@ export const ChartBuilder = () => {
         { value: 'gender', label: 'Gender' },
         { value: 'title', label: 'Job Title' }
       ];
-    } else {
+    } else if (activeObject === 'Position') {
       return [
         { value: 'department', label: 'Department' },
         { value: 'effectiveStatus', label: 'Effective Status' },
@@ -29,6 +29,32 @@ export const ChartBuilder = () => {
         { value: 'division', label: 'Division' },
         { value: 'vacant', label: 'Vacancy Status' }
       ];
+    } else if (activeObject === 'Department') {
+      return [
+        { value: 'status', label: 'Status' },
+        { value: 'createdBy', label: 'Created By' },
+        { value: 'lastModifiedBy', label: 'Last Modified By' },
+        { value: 'name', label: 'Department Name' }
+      ];
+    } else if (activeObject === 'Location') {
+      return [
+        { value: 'status', label: 'Status' },
+        { value: 'timezone', label: 'Timezone' },
+        { value: 'locationGroup', label: 'Location Group' },
+        { value: 'name', label: 'Location Name' }
+      ];
+    } else if (activeObject === 'Division') {
+      return [
+        { value: 'status', label: 'Status' },
+        { value: 'createdBy', label: 'Created By' },
+        { value: 'name', label: 'Division Name' }
+      ];
+    } else { // Company
+      return [
+        { value: 'status', label: 'Status' },
+        { value: 'country', label: 'Country' },
+        { value: 'name', label: 'Company Name' }
+      ];
     }
   }, [activeObject]);
 
@@ -37,12 +63,17 @@ export const ChartBuilder = () => {
       return [
         { value: 'teamMembersSize', label: 'Team Size (Direct Reports)' }
       ];
-    } else {
+    } else if (activeObject === 'Position') {
       return [
         { value: 'targetFTE', label: 'Target FTE (Full-Time Equiv)' },
         { value: 'standardHours', label: 'Standard Weekly Hours' }
       ];
+    } else if (activeObject === 'Location') {
+      return [
+        { value: 'standardHours', label: 'Standard Work Hours' }
+      ];
     }
+    return [];
   }, [activeObject]);
 
   const handleChartTypeChange = (type) => {
@@ -56,7 +87,9 @@ export const ChartBuilder = () => {
   const handleAggregationChange = (agg) => {
     let numericField = chartSettings.numericField;
     if ((agg === 'sum' || agg === 'average') && !numericField) {
-      numericField = activeObject === 'User' ? 'teamMembersSize' : 'targetFTE';
+      if (activeObject === 'User') numericField = 'teamMembersSize';
+      else if (activeObject === 'Position') numericField = 'targetFTE';
+      else if (activeObject === 'Location') numericField = 'standardHours';
     }
     updateChartSettings({ aggregation: agg, numericField });
   };
@@ -65,7 +98,14 @@ export const ChartBuilder = () => {
     updateChartSettings({ numericField: field });
   };
 
-  const showNumericField = chartSettings.aggregation === 'sum' || chartSettings.aggregation === 'average';
+  const hasNumericFields = numericFields.length > 0;
+  const showNumericField = (chartSettings.aggregation === 'sum' || chartSettings.aggregation === 'average') && hasNumericFields;
+
+  React.useEffect(() => {
+    if (!hasNumericFields && (chartSettings.aggregation === 'sum' || chartSettings.aggregation === 'average')) {
+      updateChartSettings({ aggregation: 'count', numericField: '' });
+    }
+  }, [activeObject, hasNumericFields]);
 
   return (
     <div className="bg-white border border-fiori-border rounded p-5 shadow-sm">
@@ -130,9 +170,19 @@ export const ChartBuilder = () => {
             className="w-full px-2.5 py-1.5 border border-fiori-border rounded text-sm bg-white focus:outline-none focus:border-fiori-blue"
           >
             <option value="count">Count (Record Volume)</option>
-            <option value="sum">Sum (Add Numeric Field)</option>
-            <option value="average">Average (Mean of Numeric Field)</option>
+            {hasNumericFields && (
+              <>
+                <option value="sum">Sum (Add Numeric Field)</option>
+                <option value="average">Average (Mean of Numeric Field)</option>
+              </>
+            )}
           </select>
+          {!hasNumericFields && (
+            <div className="flex items-center gap-1 mt-1 text-[10px] text-fiori-text-muted italic">
+              <AlertCircle className="w-3.5 h-3.5 text-fiori-warning" />
+              Sum/Average disabled (no numeric fields on this object).
+            </div>
+          )}
         </div>
 
         {showNumericField && (

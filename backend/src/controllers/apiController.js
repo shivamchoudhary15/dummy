@@ -1,6 +1,7 @@
 import { successFactorsService } from '../services/successFactorsService.js';
 import { aggregationService } from '../services/aggregationService.js';
 import { nlpService } from '../services/nlpService.js';
+import { llmService } from '../services/llmService.js';
 
 // In-memory data store for connection details and telemetry report history
 global.activeConnection = null;
@@ -73,15 +74,19 @@ export const apiController = {
   },
 
   /**
-   * Generic API to fetch user or position data from SuccessFactors
+   * Generic API to fetch user, position, department, location, division, or company data from SuccessFactors
    */
   async fetchData(req, res) {
     try {
       const { objectType, filters = {} } = req.body;
       const forceRefresh = req.query.forceRefresh === 'true';
 
-      if (!objectType || !['User', 'Position'].includes(objectType)) {
-        return res.status(400).json({ success: false, message: 'Invalid object type. Must be User or Position.' });
+      const validObjects = ['User', 'Position', 'Department', 'Location', 'Division', 'Company'];
+      if (!objectType || !validObjects.includes(objectType)) {
+        return res.status(400).json({ 
+          success: false, 
+          message: `Invalid object type. Must be one of: ${validObjects.join(', ')}.` 
+        });
       }
 
       const connection = await apiController.getActiveConnection();
@@ -95,8 +100,16 @@ export const apiController = {
       let data = [];
       if (objectType === 'User') {
         data = await successFactorsService.fetchUsers(connection, {}, forceRefresh);
-      } else {
+      } else if (objectType === 'Position') {
         data = await successFactorsService.fetchPositions(connection, {}, forceRefresh);
+      } else if (objectType === 'Department') {
+        data = await successFactorsService.fetchDepartments(connection, {}, forceRefresh);
+      } else if (objectType === 'Location') {
+        data = await successFactorsService.fetchLocations(connection, {}, forceRefresh);
+      } else if (objectType === 'Division') {
+        data = await successFactorsService.fetchDivisions(connection, {}, forceRefresh);
+      } else if (objectType === 'Company') {
+        data = await successFactorsService.fetchCompanies(connection, {}, forceRefresh);
       }
 
       // Apply filtering
@@ -132,6 +145,38 @@ export const apiController = {
    */
   async getPositions(req, res) {
     req.body = { objectType: 'Position', filters: req.query.filters ? JSON.parse(req.query.filters) : {} };
+    return apiController.fetchData(req, res);
+  },
+
+  /**
+   * GET /api/departments
+   */
+  async getDepartments(req, res) {
+    req.body = { objectType: 'Department', filters: req.query.filters ? JSON.parse(req.query.filters) : {} };
+    return apiController.fetchData(req, res);
+  },
+
+  /**
+   * GET /api/locations
+   */
+  async getLocations(req, res) {
+    req.body = { objectType: 'Location', filters: req.query.filters ? JSON.parse(req.query.filters) : {} };
+    return apiController.fetchData(req, res);
+  },
+
+  /**
+   * GET /api/divisions
+   */
+  async getDivisions(req, res) {
+    req.body = { objectType: 'Division', filters: req.query.filters ? JSON.parse(req.query.filters) : {} };
+    return apiController.fetchData(req, res);
+  },
+
+  /**
+   * GET /api/companies
+   */
+  async getCompanies(req, res) {
+    req.body = { objectType: 'Company', filters: req.query.filters ? JSON.parse(req.query.filters) : {} };
     return apiController.fetchData(req, res);
   },
 
@@ -180,18 +225,53 @@ export const apiController = {
    */
   async nlpChart(req, res) {
     try {
-      const { prompt } = req.body;
+      const { prompt, provider = 'local', apiKey = '' } = req.body;
 
       if (!prompt) {
         return res.status(400).json({ success: false, message: 'Prompt is required.' });
       }
 
-      const spec = nlpService.parsePrompt(prompt);
-      res.status(200).json(spec);
+      if (provider === 'local') {
+        const spec = nlpService.parsePrompt(prompt);
+        return res.status(200).json(spec);
+      }
+
+      // If user selected an LLM provider, parse using LLM
+      try {
+        console.log(`Routing NLP parse request to ${provider}...`);
+        const spec = await llmService.parsePromptWithLlm(prompt, provider, apiKey);
+        return res.status(200).json(spec);
+      } catch (llmError) {
+        console.warn(`LLM parsing failed, falling back to local NLP heuristics:`, llmError.message);
+        
+        // Local fallback
+        const spec = nlpService.parsePrompt(prompt);
+        return res.status(200).json({
+          ...spec,
+          fallbackReason: llmError.message
+        });
+      }
 
     } catch (error) {
       console.error('NLP processing error:', error);
       res.status(500).json({ success: false, message: error.message });
+    }
+  },
+
+  /**
+   * POST /api/verify-llm-key
+   */
+  async verifyLlmKey(req, res) {
+    try {
+      const { provider, apiKey } = req.body;
+      if (!provider || !apiKey) {
+        return res.status(400).json({ success: false, message: 'Provider and API Key are required.' });
+      }
+      await llmService.verifyKey(provider, apiKey);
+      res.status(200).json({ success: true, message: 'API key is valid.' });
+    } catch (error) {
+      console.error('LLM Key Verification Error:', error.message);
+      res.status(400).json({ success: false, message: error.message });
     }
   },
 

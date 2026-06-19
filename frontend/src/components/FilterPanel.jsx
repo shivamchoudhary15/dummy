@@ -18,7 +18,14 @@ export const FilterPanel = () => {
       statuses: new Set(),
       jobCodes: new Set(),
       managers: new Set(),
-      titles: new Set()
+      titles: new Set(),
+      
+      // Extended fields
+      createdBys: new Set(),
+      lastModifiedBys: new Set(),
+      timezones: new Set(),
+      locationGroups: new Set(),
+      countries: new Set()
     };
 
     rawData.forEach(item => {
@@ -30,6 +37,12 @@ export const FilterPanel = () => {
       if (item.positionTitle && item.positionTitle !== 'N/A') options.titles.add(item.positionTitle);
       if (item.title && item.title !== 'N/A') options.titles.add(item.title);
       if (item.manager && item.manager.displayName) options.managers.add(item.manager.displayName);
+      
+      if (item.createdBy) options.createdBys.add(item.createdBy);
+      if (item.lastModifiedBy) options.lastModifiedBys.add(item.lastModifiedBy);
+      if (item.timezone) options.timezones.add(item.timezone);
+      if (item.locationGroup) options.locationGroups.add(item.locationGroup);
+      if (item.country) options.countries.add(item.country);
     });
 
     return {
@@ -38,7 +51,12 @@ export const FilterPanel = () => {
       statuses: Array.from(options.statuses).sort(),
       jobCodes: Array.from(options.jobCodes).sort(),
       managers: Array.from(options.managers).sort(),
-      titles: Array.from(options.titles).sort()
+      titles: Array.from(options.titles).sort(),
+      createdBys: Array.from(options.createdBys).sort(),
+      lastModifiedBys: Array.from(options.lastModifiedBys).sort(),
+      timezones: Array.from(options.timezones).sort(),
+      locationGroups: Array.from(options.locationGroups).sort(),
+      countries: Array.from(options.countries).sort()
     };
   }, [rawData]);
 
@@ -63,7 +81,7 @@ export const FilterPanel = () => {
       </div>
 
       <div className="space-y-4">
-        {activeObject === 'User' ? (
+        {activeObject === 'User' && (
           <>
             <div>
               <label className="block text-xs font-medium text-fiori-text-muted mb-1">Department</label>
@@ -120,7 +138,9 @@ export const FilterPanel = () => {
               </select>
             </div>
           </>
-        ) : (
+        )}
+
+        {activeObject === 'Position' && (
           <>
             <div>
               <label className="block text-xs font-medium text-fiori-text-muted mb-1">Department</label>
@@ -174,6 +194,158 @@ export const FilterPanel = () => {
                 <option value="">All Statuses</option>
                 <option value="Active">Active</option>
                 <option value="Inactive">Inactive</option>
+              </select>
+            </div>
+          </>
+        )}
+
+        {activeObject === 'Department' && (
+          <>
+            <div>
+              <label className="block text-xs font-medium text-fiori-text-muted mb-1">Status</label>
+              <select
+                value={filters.status || ''}
+                onChange={(e) => updateFilter('status', e.target.value)}
+                className="w-full px-2.5 py-1.5 border border-fiori-border rounded text-sm bg-white focus:outline-none focus:border-fiori-blue"
+              >
+                <option value="">All Statuses</option>
+                <option value="Active">Active</option>
+                <option value="Inactive">Inactive</option>
+              </select>
+            </div>
+
+            <div>
+              <label className="block text-xs font-medium text-fiori-text-muted mb-1">Created By</label>
+              <select
+                value={filters.createdBy || ''}
+                onChange={(e) => updateFilter('createdBy', e.target.value)}
+                className="w-full px-2.5 py-1.5 border border-fiori-border rounded text-sm bg-white focus:outline-none focus:border-fiori-blue"
+              >
+                <option value="">All Authors</option>
+                {filterOptions.createdBys.map(cb => (
+                  <option key={cb} value={cb}>{cb}</option>
+                ))}
+              </select>
+            </div>
+
+            <div>
+              <label className="block text-xs font-medium text-fiori-text-muted mb-1">Last Modified By</label>
+              <select
+                value={filters.lastModifiedBy || ''}
+                onChange={(e) => updateFilter('lastModifiedBy', e.target.value)}
+                className="w-full px-2.5 py-1.5 border border-fiori-border rounded text-sm bg-white focus:outline-none focus:border-fiori-blue"
+              >
+                <option value="">All Editors</option>
+                {filterOptions.lastModifiedBys.map(lmb => (
+                  <option key={lmb} value={lmb}>{lmb}</option>
+                ))}
+              </select>
+            </div>
+          </>
+        )}
+
+        {activeObject === 'Location' && (
+          <>
+            <div>
+              <label className="block text-xs font-medium text-fiori-text-muted mb-1">Status</label>
+              <select
+                value={filters.status || ''}
+                onChange={(e) => updateFilter('status', e.target.value)}
+                className="w-full px-2.5 py-1.5 border border-fiori-border rounded text-sm bg-white focus:outline-none focus:border-fiori-blue"
+              >
+                <option value="">All Statuses</option>
+                <option value="Active">Active</option>
+                <option value="Inactive">Inactive</option>
+              </select>
+            </div>
+
+            <div>
+              <label className="block text-xs font-medium text-fiori-text-muted mb-1">Timezone</label>
+              <select
+                value={filters.timezone || ''}
+                onChange={(e) => updateFilter('timezone', e.target.value)}
+                className="w-full px-2.5 py-1.5 border border-fiori-border rounded text-sm bg-white focus:outline-none focus:border-fiori-blue"
+              >
+                <option value="">All Timezones</option>
+                {filterOptions.timezones.map(tz => (
+                  <option key={tz} value={tz}>{tz}</option>
+                ))}
+              </select>
+            </div>
+
+            <div>
+              <label className="block text-xs font-medium text-fiori-text-muted mb-1">Location Group</label>
+              <select
+                value={filters.locationGroup || ''}
+                onChange={(e) => updateFilter('locationGroup', e.target.value)}
+                className="w-full px-2.5 py-1.5 border border-fiori-border rounded text-sm bg-white focus:outline-none focus:border-fiori-blue"
+              >
+                <option value="">All Regions</option>
+                {filterOptions.locationGroups.map(lg => (
+                  <option key={lg} value={lg}>{lg}</option>
+                ))}
+              </select>
+            </div>
+          </>
+        )}
+
+        {activeObject === 'Division' && (
+          <>
+            <div>
+              <label className="block text-xs font-medium text-fiori-text-muted mb-1">Status</label>
+              <select
+                value={filters.status || ''}
+                onChange={(e) => updateFilter('status', e.target.value)}
+                className="w-full px-2.5 py-1.5 border border-fiori-border rounded text-sm bg-white focus:outline-none focus:border-fiori-blue"
+              >
+                <option value="">All Statuses</option>
+                <option value="Active">Active</option>
+                <option value="Inactive">Inactive</option>
+              </select>
+            </div>
+
+            <div>
+              <label className="block text-xs font-medium text-fiori-text-muted mb-1">Created By</label>
+              <select
+                value={filters.createdBy || ''}
+                onChange={(e) => updateFilter('createdBy', e.target.value)}
+                className="w-full px-2.5 py-1.5 border border-fiori-border rounded text-sm bg-white focus:outline-none focus:border-fiori-blue"
+              >
+                <option value="">All Authors</option>
+                {filterOptions.createdBys.map(cb => (
+                  <option key={cb} value={cb}>{cb}</option>
+                ))}
+              </select>
+            </div>
+          </>
+        )}
+
+        {activeObject === 'Company' && (
+          <>
+            <div>
+              <label className="block text-xs font-medium text-fiori-text-muted mb-1">Status</label>
+              <select
+                value={filters.status || ''}
+                onChange={(e) => updateFilter('status', e.target.value)}
+                className="w-full px-2.5 py-1.5 border border-fiori-border rounded text-sm bg-white focus:outline-none focus:border-fiori-blue"
+              >
+                <option value="">All Statuses</option>
+                <option value="Active">Active</option>
+                <option value="Inactive">Inactive</option>
+              </select>
+            </div>
+
+            <div>
+              <label className="block text-xs font-medium text-fiori-text-muted mb-1">Country</label>
+              <select
+                value={filters.country || ''}
+                onChange={(e) => updateFilter('country', e.target.value)}
+                className="w-full px-2.5 py-1.5 border border-fiori-border rounded text-sm bg-white focus:outline-none focus:border-fiori-blue"
+              >
+                <option value="">All Countries</option>
+                {filterOptions.countries.map(c => (
+                  <option key={c} value={c}>{c}</option>
+                ))}
               </select>
             </div>
           </>

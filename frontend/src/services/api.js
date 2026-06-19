@@ -53,8 +53,16 @@ export const apiService = {
   /**
    * Send NLP query to extract chart spec parameters
    */
-  async parseNlp(prompt) {
-    const response = await api.post('/nlp-chart', { prompt });
+  async parseNlp(prompt, provider = 'local', apiKey = '') {
+    const response = await api.post('/nlp-chart', { prompt, provider, apiKey });
+    return response.data;
+  },
+
+  /**
+   * Verify LLM provider API key
+   */
+  async verifyLlmKey(provider, apiKey) {
+    const response = await api.post('/verify-llm-key', { provider, apiKey });
     return response.data;
   },
 };

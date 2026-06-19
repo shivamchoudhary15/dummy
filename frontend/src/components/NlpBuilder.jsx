@@ -23,19 +23,46 @@ export const NlpBuilder = () => {
     setLoading(false);
   };
 
-  const suggestions = activeObject === 'User' 
-    ? [
+  // Dynamic suggestions for all 4 entities
+  const suggestions = React.useMemo(() => {
+    if (activeObject === 'User') {
+      return [
         'headcount by department as bar chart',
         'average team size by location as pie chart',
-        'headcount by gender as pie chart',
-        'headcount by manager as bar chart'
-      ]
-    : [
+        'headcount by gender as pie chart'
+      ];
+    } else if (activeObject === 'Position') {
+      return [
         'average target fte by department as bar chart',
         'positions by effectiveStatus as pie chart',
-        'average standard hours by division as bar chart',
-        'positions by vacant as pie chart'
+        'average standard hours by division as bar chart'
       ];
+    } else if (activeObject === 'Department') {
+      return [
+        'departments by status as pie chart',
+        'departments by createdBy as bar chart',
+        'departments by lastModifiedBy as bar chart'
+      ];
+    } else if (activeObject === 'Location') {
+      return [
+        'locations by timezone as pie chart',
+        'locations by locationGroup as bar chart',
+        'average standard hours by locationGroup as bar chart'
+      ];
+    } else if (activeObject === 'Division') {
+      return [
+        'divisions by status as pie chart',
+        'divisions by createdBy as bar chart',
+        'divisions by name as bar chart'
+      ];
+    } else { // Company
+      return [
+        'companies by status as pie chart',
+        'companies by country as bar chart',
+        'companies by name as bar chart'
+      ];
+    }
+  }, [activeObject]);
 
   return (
     <div className="bg-white border border-fiori-border rounded p-5 shadow-sm">

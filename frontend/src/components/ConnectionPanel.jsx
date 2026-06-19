@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import { useApp } from '../context/AppContext';
-import { KeyRound, Server, Building2, User, Globe, AlertCircle, CheckCircle2, Loader2, LogOut } from 'lucide-react';
+import { KeyRound, Server, Building2, User, Globe, AlertCircle, CheckCircle2, Loader2 } from 'lucide-react';
 
 export const ConnectionPanel = () => {
-  const { isConnected, connectionInfo, connect, disconnect, loading, error } = useApp();
+  const { isConnected, connectionInfo, connect, loading, error } = useApp();
 
   const [companyId, setCompanyId] = useState('SFCPART001143');
   const [username, setUsername] = useState('GLA_USER_1');
@@ -18,18 +18,11 @@ export const ConnectionPanel = () => {
   if (isConnected && connectionInfo) {
     return (
       <div className="bg-white border border-fiori-border rounded p-5 shadow-sm">
-        <div className="flex items-center justify-between mb-4 border-b border-fiori-border pb-3">
+        <div className="flex items-center mb-4 border-b border-fiori-border pb-3">
           <h3 className="text-lg font-semibold text-fiori-shell flex items-center gap-2">
             <CheckCircle2 className="text-fiori-success w-5 h-5" />
             Connected to SAP SuccessFactors
           </h3>
-          <button
-            onClick={disconnect}
-            className="flex items-center gap-1.5 px-3 py-1.5 border border-fiori-error text-fiori-error hover:bg-red-50 text-xs font-medium rounded transition"
-          >
-            <LogOut className="w-3.5 h-3.5" />
-            Disconnect
-          </button>
         </div>
         
         <div className="grid grid-cols-2 gap-x-4 gap-y-2 text-sm">

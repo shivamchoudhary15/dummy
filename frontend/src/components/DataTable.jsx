@@ -32,7 +32,7 @@ export const DataTable = () => {
         { key: 'status', label: 'Status' },
         { key: 'manager', label: 'Manager' }
       ];
-    } else {
+    } else if (activeObject === 'Position') {
       return [
         { key: 'code', label: 'Position Code' },
         { key: 'positionTitle', label: 'Position Title' },
@@ -42,6 +42,39 @@ export const DataTable = () => {
         { key: 'effectiveStatus', label: 'Status' },
         { key: 'targetFTE', label: 'FTE' },
         { key: 'standardHours', label: 'Std Hours' }
+      ];
+    } else if (activeObject === 'Department') {
+      return [
+        { key: 'code', label: 'Department Code' },
+        { key: 'name', label: 'Department Name' },
+        { key: 'status', label: 'Status' },
+        { key: 'description', label: 'Description' },
+        { key: 'createdBy', label: 'Created By' }
+      ];
+    } else if (activeObject === 'Location') {
+      return [
+        { key: 'code', label: 'Location Code' },
+        { key: 'name', label: 'Location Name' },
+        { key: 'status', label: 'Status' },
+        { key: 'timezone', label: 'Timezone' },
+        { key: 'locationGroup', label: 'Region Group' },
+        { key: 'standardHours', label: 'Weekly Hours' }
+      ];
+    } else if (activeObject === 'Division') {
+      return [
+        { key: 'code', label: 'Division Code' },
+        { key: 'name', label: 'Division Name' },
+        { key: 'status', label: 'Status' },
+        { key: 'description', label: 'Description' },
+        { key: 'createdBy', label: 'Created By' }
+      ];
+    } else { // Company
+      return [
+        { key: 'code', label: 'Company Code' },
+        { key: 'name', label: 'Company Name' },
+        { key: 'status', label: 'Status' },
+        { key: 'country', label: 'Country' },
+        { key: 'description', label: 'Description' }
       ];
     }
   }, [activeObject]);
