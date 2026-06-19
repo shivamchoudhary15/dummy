@@ -1,0 +1,14 @@
+{
+  "name": "sf-insight-monorepo",
+  "version": "1.0.0",
+  "description": "Root workspace for SF Insight: SAP SuccessFactors self-service reporting platform",
+  "scripts": {
+    "install:all": "npm install --prefix backend && npm install --prefix frontend",
+    "backend": "npm run dev --prefix backend",
+    "frontend": "npm run dev --prefix frontend",
+    "start": "npx concurrently \"npm run backend\" \"npm run frontend\""
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}

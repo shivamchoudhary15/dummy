@@ -1,0 +1,143 @@
+{
+"d" : {
+"results" : [
+{
+"__metadata" : {
+"uri" : "https://apisalesdemo2.successfactors.eu/odata/v2/Position(code='50021015',effectiveStartDate=datetime'1990-01-01T00:00:00')", "type" : "SFOData.Position"
+}, "code" : "50021015", "effectiveStartDate" : "\/Date(631152000000)\/", "createdDateTime" : "\/Date(1443704567000+0000)\/", "jobCode" : "7000026", "mdfSystemVersionId" : null, "type" : null, "division" : null, "externalName_zh_TW" : null, "externalName_ja_JP" : null, "cust_isImp" : null, "costCenter" : null, "legacyPositionId" : null, "externalName_zh_CN" : null, "externalName_localized" : null, "mdfSystemRecordStatus" : "N", "vacant" : null, "externalName_fr_FR" : null, "externalName_tr_TR" : null, "externalName_en_GB" : null, "externalName_nl_NL" : null, "positionTitle" : null, "externalName_defaultValue" : null, "payGrade" : null, "mdfSystemObjectType" : "Position", "creationSource" : null, "targetFTE" : null, "externalName_ru_RU" : null, "jobLevel" : null, "cust_personnelSubArea" : null, "externalName_ko_KR" : null, "createdDate" : "\/Date(1443704567000)\/", "mdfSystemRecordId" : "856954BAB4E041C2B6C18420C58C033F", "externalName_sv_SE" : null, "multipleIncumbentsAllowed" : true, "externalName_da_DK" : null, "businessUnit" : null, "lastModifiedDateTime" : "\/Date(1778151865000+0000)\/", "jobTitle" : null, "criticality" : null, "cust_directIndirect" : "U", "incumbent" : null, "externalName_fi_FI" : null, "mdfSystemEntityId" : "1ABCE2770B104B83B4E760E948FFABA2", "payRange" : null, "regularTemporary" : null, "externalName_pt_PT" : null, "cust_recruiter" : null, "standardHours" : null, "externalName_nb_NO" : null, "effectiveStatus" : "A", "cust_personnelArea" : null, "technicalParameters" : null, "cust_employmentType" : null, "cust_isHRBP" : null, "effectiveEndDate" : "\/Date(253402214400000)\/", "positionCriticality" : null, "cust_globalEmpSubgroup" : null, "description" : null, "externalName_ar_SA" : null, "externalName_es_ES" : null, "positionControlled" : null, "cust_weeklytraininghours" : null, "externalName_pt_BR" : null, "company" : null, "department" : null, "employeeClass" : null, "changeReason" : null, "employmentType" : null, "lastModifiedDate" : "\/Date(1778151865000)\/", "externalName_it_IT" : null, "lastModifiedBy" : "amoghkrishna", "lastModifiedDateWithTZ" : "\/Date(1778151865000+0000)\/", "transactionSequence" : "1", "cust_incentivePlan" : null, "externalName_de_DE" : null, "createdBy" : "sfadmin", "mdfSystemOptimisticLockUUID" : "F22721D0377F4537AF510DD9FAF83782", "comment" : null, "location" : null, "cust_employeeSubgroup" : null, "externalName_en_US" : null, "externalName_en_DEBUG" : null, "cust_personnelSubAreaNav" : {
+"__deferred" : {
+"uri" : "https://apisalesdemo2.successfactors.eu/odata/v2/Position(code='50021015',effectiveStartDate=datetime'1990-01-01T00:00:00')/cust_personnelSubAreaNav"
+}
+}, "externalNameTranslationTextNav" : {
+"__deferred" : {
+"uri" : "https://apisalesdemo2.successfactors.eu/odata/v2/Position(code='50021015',effectiveStartDate=datetime'1990-01-01T00:00:00')/externalNameTranslationTextNav"
+}
+}, "incumbentNav" : {
+"__deferred" : {
+"uri" : "https://apisalesdemo2.successfactors.eu/odata/v2/Position(code='50021015',effectiveStartDate=datetime'1990-01-01T00:00:00')/incumbentNav"
+}
+}, "positionCriticalityNav" : {
+"__deferred" : {
+"uri" : "https://apisalesdemo2.successfactors.eu/odata/v2/Position(code='50021015',effectiveStartDate=datetime'1990-01-01T00:00:00')/positionCriticalityNav"
+}
+}, "changeReasonNav" : {
+"__deferred" : {
+"uri" : "https://apisalesdemo2.successfactors.eu/odata/v2/Position(code='50021015',effectiveStartDate=datetime'1990-01-01T00:00:00')/changeReasonNav"
+}
+}, "companyNav" : {
+"__deferred" : {
+"uri" : "https://apisalesdemo2.successfactors.eu/odata/v2/Position(code='50021015',effectiveStartDate=datetime'1990-01-01T00:00:00')/companyNav"
+}
+}, "successorNav" : {
+"__deferred" : {
+"uri" : "https://apisalesdemo2.successfactors.eu/odata/v2/Position(code='50021015',effectiveStartDate=datetime'1990-01-01T00:00:00')/successorNav"
+}
+}, "cust_incentivePlanNav" : {
+"__deferred" : {
+"uri" : "https://apisalesdemo2.successfactors.eu/odata/v2/Position(code='50021015',effectiveStartDate=datetime'1990-01-01T00:00:00')/cust_incentivePlanNav"
+}
+}, "departmentNav" : {
+"__deferred" : {
+"uri" : "https://apisalesdemo2.successfactors.eu/odata/v2/Position(code='50021015',effectiveStartDate=datetime'1990-01-01T00:00:00')/departmentNav"
+}
+}, "cust_isImpNav" : {
+"__deferred" : {
+"uri" : "https://apisalesdemo2.successfactors.eu/odata/v2/Position(code='50021015',effectiveStartDate=datetime'1990-01-01T00:00:00')/cust_isImpNav"
+}
+}, "businessUnitNav" : {
+"__deferred" : {
+"uri" : "https://apisalesdemo2.successfactors.eu/odata/v2/Position(code='50021015',effectiveStartDate=datetime'1990-01-01T00:00:00')/businessUnitNav"
+}
+}, "payRangeNav" : {
+"__deferred" : {
+"uri" : "https://apisalesdemo2.successfactors.eu/odata/v2/Position(code='50021015',effectiveStartDate=datetime'1990-01-01T00:00:00')/payRangeNav"
+}
+}, "jobLevelNav" : {
+"__deferred" : {
+"uri" : "https://apisalesdemo2.successfactors.eu/odata/v2/Position(code='50021015',effectiveStartDate=datetime'1990-01-01T00:00:00')/jobLevelNav"
+}
+}, "costCenterNav" : {
+"__deferred" : {
+"uri" : "https://apisalesdemo2.successfactors.eu/odata/v2/Position(code='50021015',effectiveStartDate=datetime'1990-01-01T00:00:00')/costCenterNav"
+}
+}, "cust_employmentTypeNav" : {
+"__deferred" : {
+"uri" : "https://apisalesdemo2.successfactors.eu/odata/v2/Position(code='50021015',effectiveStartDate=datetime'1990-01-01T00:00:00')/cust_employmentTypeNav"
+}
+}, "employmentTypeNav" : {
+"__deferred" : {
+"uri" : "https://apisalesdemo2.successfactors.eu/odata/v2/Position(code='50021015',effectiveStartDate=datetime'1990-01-01T00:00:00')/employmentTypeNav"
+}
+}, "cust_recruiterNav" : {
+"__deferred" : {
+"uri" : "https://apisalesdemo2.successfactors.eu/odata/v2/Position(code='50021015',effectiveStartDate=datetime'1990-01-01T00:00:00')/cust_recruiterNav"
+}
+}, "divisionNav" : {
+"__deferred" : {
+"uri" : "https://apisalesdemo2.successfactors.eu/odata/v2/Position(code='50021015',effectiveStartDate=datetime'1990-01-01T00:00:00')/divisionNav"
+}
+}, "creationSourceNav" : {
+"__deferred" : {
+"uri" : "https://apisalesdemo2.successfactors.eu/odata/v2/Position(code='50021015',effectiveStartDate=datetime'1990-01-01T00:00:00')/creationSourceNav"
+}
+}, "regularTemporaryNav" : {
+"__deferred" : {
+"uri" : "https://apisalesdemo2.successfactors.eu/odata/v2/Position(code='50021015',effectiveStartDate=datetime'1990-01-01T00:00:00')/regularTemporaryNav"
+}
+}, "createdByNav" : {
+"__deferred" : {
+"uri" : "https://apisalesdemo2.successfactors.eu/odata/v2/Position(code='50021015',effectiveStartDate=datetime'1990-01-01T00:00:00')/createdByNav"
+}
+}, "effectiveStatusNav" : {
+"__deferred" : {
+"uri" : "https://apisalesdemo2.successfactors.eu/odata/v2/Position(code='50021015',effectiveStartDate=datetime'1990-01-01T00:00:00')/effectiveStatusNav"
+}
+}, "positionMatrixRelationship" : {
+"__deferred" : {
+"uri" : "https://apisalesdemo2.successfactors.eu/odata/v2/Position(code='50021015',effectiveStartDate=datetime'1990-01-01T00:00:00')/positionMatrixRelationship"
+}
+}, "locationNav" : {
+"__deferred" : {
+"uri" : "https://apisalesdemo2.successfactors.eu/odata/v2/Position(code='50021015',effectiveStartDate=datetime'1990-01-01T00:00:00')/locationNav"
+}
+}, "employeeClassNav" : {
+"__deferred" : {
+"uri" : "https://apisalesdemo2.successfactors.eu/odata/v2/Position(code='50021015',effectiveStartDate=datetime'1990-01-01T00:00:00')/employeeClassNav"
+}
+}, "jobCodeNav" : {
+"__deferred" : {
+"uri" : "https://apisalesdemo2.successfactors.eu/odata/v2/Position(code='50021015',effectiveStartDate=datetime'1990-01-01T00:00:00')/jobCodeNav"
+}
+}, "lastModifiedByNav" : {
+"__deferred" : {
+"uri" : "https://apisalesdemo2.successfactors.eu/odata/v2/Position(code='50021015',effectiveStartDate=datetime'1990-01-01T00:00:00')/lastModifiedByNav"
+}
+}, "mdfSystemRecordStatusNav" : {
+"__deferred" : {
+"uri" : "https://apisalesdemo2.successfactors.eu/odata/v2/Position(code='50021015',effectiveStartDate=datetime'1990-01-01T00:00:00')/mdfSystemRecordStatusNav"
+}
+}, "cust_personnelAreaNav" : {
+"__deferred" : {
+"uri" : "https://apisalesdemo2.successfactors.eu/odata/v2/Position(code='50021015',effectiveStartDate=datetime'1990-01-01T00:00:00')/cust_personnelAreaNav"
+}
+}, "parentPosition" : {
+"__deferred" : {
+"uri" : "https://apisalesdemo2.successfactors.eu/odata/v2/Position(code='50021015',effectiveStartDate=datetime'1990-01-01T00:00:00')/parentPosition"
+}
+}, "wfRequestNav" : {
+"__deferred" : {
+"uri" : "https://apisalesdemo2.successfactors.eu/odata/v2/Position(code='50021015',effectiveStartDate=datetime'1990-01-01T00:00:00')/wfRequestNav"
+}
+}, "cust_directIndirectNav" : {
+"__deferred" : {
+"uri" : "https://apisalesdemo2.successfactors.eu/odata/v2/Position(code='50021015',effectiveStartDate=datetime'1990-01-01T00:00:00')/cust_directIndirectNav"
+}
+}, "payGradeNav" : {
+"__deferred" : {
+"uri" : "https://apisalesdemo2.successfactors.eu/odata/v2/Position(code='50021015',effectiveStartDate=datetime'1990-01-01T00:00:00')/payGradeNav"
+}
+}
+}
+]
+}
+}

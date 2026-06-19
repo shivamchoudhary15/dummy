@@ -1,0 +1,691 @@
+{
+"d" : {
+"results" : [
+{
+"__metadata" : {
+"uri" : "https://apisalesdemo2.successfactors.eu/odata/v2/User('952324')", "type" : "SFOData.User"
+}, "userId" : "952324", "salaryBudgetFinalSalaryPercentage" : null, "dateOfCurrentPosition" : null, "matrix1Label" : null, "salary" : null, "objective" : null, "ssn" : null, "state" : null, "issueComments" : null, "timeZone" : "US/Eastern", "defaultLocale" : "en_US", "nationality" : null, "salaryBudgetLumpsumPercentage" : null, "sysCostOfSource" : null, "ethnicity" : null, "displayName" : "Unknown", "payGrade" : null, "nickname" : null, "email" : null, "salaryBudgetExtra2Percentage" : null, "stockBudgetOther1Amount" : null, "raiseProrating" : null, "sysStartingSalary" : null, "finalJobCode" : null, "lumpsum2Target" : null, "stockBudgetOptionAmount" : null, "country" : null, "lastModifiedDateTime" : "\/Date(1778530442000+0000)\/", "stockBudgetStockAmount" : null, "sciLastModified" : null, "criticalTalentComments" : null, "homePhone" : null, "veteranSeparated" : null, "stockBudgetOther2Amount" : null, "firstName" : null, "stockBudgetUnitAmount" : null, "salutation" : null, "impactOfLoss" : null, "benchStrength" : null, "sysSource" : null, "futureLeader" : null, "title" : null, "meritEffectiveDate" : null, "veteranProtected" : null, "lumpsumTarget" : null, "employeeClass" : null, "hireDate" : null, "matrix2Label" : null, "loginMethod" : null, "salaryLocal" : null, "citizenship" : null, "reasonForLeaving" : null, "riskOfLoss" : null, "location" : "N/A", "reloComments" : null, "username" : "952324", "serviceDate" : null, "reviewFreq" : null, "salaryBudgetTotalRaisePercentage" : null, "jobCode" : null, "lastModifiedWithTZ" : "\/Date(1778530442000+0000)\/", "division" : "N/A", "custom02" : null, "meritTarget" : null, "custom01" : null, "isAlumni" : false, "custom04" : null, "custom03" : null, "custom06" : null, "custom05" : null, "custom08" : null, "reloWilling" : null, "custom07" : null, "stockBudgetOther3Amount" : null, "custom09" : null, "onboardingId" : null, "fax" : null, "bonusBudgetAmount" : null, "salaryBudgetPromotionPercentage" : null, "dateOfPosition" : null, "finalJobFamily" : null, "teamMembersSize" : 0, "compensationEligible" : null, "lastReviewDate" : null, "compensationStockEligible" : null, "businessPhone" : null, "status" : "t", "lastName" : null, "gender" : " ", "city" : null, "competency" : null, "businessSegment" : null, "compensationSalaryRateUnits" : null, "newToPosition" : null, "assignmentUUID" : "9D19A7F9F98B49A4B1E9219A334FF006", "dateOfBirth" : null, "localCurrencyCode" : null, "jobLevel" : null, "custom11" : null, "defaultFullName" : null, "custom10" : null, "compensationReadOnly" : null, "custom13" : null, "custom12" : null, "custom15" : null, "custom14" : null, "veteranDisabled" : null, "totalTeamSize" : "0", "married" : null, "cellPhone" : null, "veteranMedal" : null, "compensationSalaryRateType" : null, "zipCode" : null, "jobTitle" : null, "minority" : null, "suffix" : null, "matrixManaged" : null, "bonusTarget" : null, "addressLine1" : null, "jobFamily" : null, "jobRole" : null, "addressLine2" : null, "addressLine3" : null, "mi" : null, "potential" : null, "origHireDate" : null, "level" : null, "assignmentIdExternal" : "952324", "salaryBudgetMeritPercentage" : null, "salaryProrating" : null, "lastModified" : "\/Date(1778530442000)\/", "promotionAmount" : null, "impactOfLossComments" : null, "empId" : null, "compensationSalaryEligible" : null, "department" : "N/A", "isPrimaryAssignment" : true, "reloLocation" : null, "companyExitDate" : null, "seatingChart" : null, "finalJobRole" : null, "performance" : null, "compensationBonusEligible" : null, "keyPosition" : null, "salaryBudgetExtraPercentage" : null, "delegatorOfAutoDelegateConfigNav" : {
+"__deferred" : {
+"uri" : "https://apisalesdemo2.successfactors.eu/odata/v2/User('952324')/delegatorOfAutoDelegateConfigNav"
+}
+}, "subjectUserOfONB2ProcessResponsibleNav" : {
+"__deferred" : {
+"uri" : "https://apisalesdemo2.successfactors.eu/odata/v2/User('952324')/subjectUserOfONB2ProcessResponsibleNav"
+}
+}, "secondManager" : {
+"__deferred" : {
+"uri" : "https://apisalesdemo2.successfactors.eu/odata/v2/User('952324')/secondManager"
+}
+}, "ethnicityNav" : {
+"__deferred" : {
+"uri" : "https://apisalesdemo2.successfactors.eu/odata/v2/User('952324')/ethnicityNav"
+}
+}, "userOfApprenticeNav" : {
+"__deferred" : {
+"uri" : "https://apisalesdemo2.successfactors.eu/odata/v2/User('952324')/userOfApprenticeNav"
+}
+}, "incumbentOfPositionNav" : {
+"__deferred" : {
+"uri" : "https://apisalesdemo2.successfactors.eu/odata/v2/User('952324')/incumbentOfPositionNav"
+}
+}, "externalCodeOfcust_FamilieNav" : {
+"__deferred" : {
+"uri" : "https://apisalesdemo2.successfactors.eu/odata/v2/User('952324')/externalCodeOfcust_FamilieNav"
+}
+}, "userSysIdCopyOfItDeclarationNav" : {
+"__deferred" : {
+"uri" : "https://apisalesdemo2.successfactors.eu/odata/v2/User('952324')/userSysIdCopyOfItDeclarationNav"
+}
+}, "subjectUserIdOfAchievementNav" : {
+"__deferred" : {
+"uri" : "https://apisalesdemo2.successfactors.eu/odata/v2/User('952324')/subjectUserIdOfAchievementNav"
+}
+}, "userIdOfExternalTimeRecordNav" : {
+"__deferred" : {
+"uri" : "https://apisalesdemo2.successfactors.eu/odata/v2/User('952324')/userIdOfExternalTimeRecordNav"
+}
+}, "usersSysIdOfEmployeeDataReplicationNotificationNav" : {
+"__deferred" : {
+"uri" : "https://apisalesdemo2.successfactors.eu/odata/v2/User('952324')/usersSysIdOfEmployeeDataReplicationNotificationNav"
+}
+}, "signatureUserOfComplianceFormSignatureNav" : {
+"__deferred" : {
+"uri" : "https://apisalesdemo2.successfactors.eu/odata/v2/User('952324')/signatureUserOfComplianceFormSignatureNav"
+}
+}, "cust_mngrRep1Ofcust_grievancesNav" : {
+"__deferred" : {
+"uri" : "https://apisalesdemo2.successfactors.eu/odata/v2/User('952324')/cust_mngrRep1Ofcust_grievancesNav"
+}
+}, "workerIdOfBenefitsIntegrationRecurringInfoNav" : {
+"__deferred" : {
+"uri" : "https://apisalesdemo2.successfactors.eu/odata/v2/User('952324')/workerIdOfBenefitsIntegrationRecurringInfoNav"
+}
+}, "nominatorIdOfSpotAwardNav" : {
+"__deferred" : {
+"uri" : "https://apisalesdemo2.successfactors.eu/odata/v2/User('952324')/nominatorIdOfSpotAwardNav"
+}
+}, "proxy" : {
+"__deferred" : {
+"uri" : "https://apisalesdemo2.successfactors.eu/odata/v2/User('952324')/proxy"
+}
+}, "targetIdOfTimeManagementAlertNav" : {
+"__deferred" : {
+"uri" : "https://apisalesdemo2.successfactors.eu/odata/v2/User('952324')/targetIdOfTimeManagementAlertNav"
+}
+}, "lastNudgedByOfONB2EquipmentActivityNav" : {
+"__deferred" : {
+"uri" : "https://apisalesdemo2.successfactors.eu/odata/v2/User('952324')/lastNudgedByOfONB2EquipmentActivityNav"
+}
+}, "matrixReports" : {
+"__deferred" : {
+"uri" : "https://apisalesdemo2.successfactors.eu/odata/v2/User('952324')/matrixReports"
+}
+}, "cust_heardGrievanceOfcust_grievancesNav" : {
+"__deferred" : {
+"uri" : "https://apisalesdemo2.successfactors.eu/odata/v2/User('952324')/cust_heardGrievanceOfcust_grievancesNav"
+}
+}, "userIdOfWorkScheduleNav" : {
+"__deferred" : {
+"uri" : "https://apisalesdemo2.successfactors.eu/odata/v2/User('952324')/userIdOfWorkScheduleNav"
+}
+}, "workerIdOfBenefitEligibleUserNav" : {
+"__deferred" : {
+"uri" : "https://apisalesdemo2.successfactors.eu/odata/v2/User('952324')/workerIdOfBenefitEligibleUserNav"
+}
+}, "subjectUserOfONB2EquipmentActivityNav" : {
+"__deferred" : {
+"uri" : "https://apisalesdemo2.successfactors.eu/odata/v2/User('952324')/subjectUserOfONB2EquipmentActivityNav"
+}
+}, "userIdOfTimeCollectorNav" : {
+"__deferred" : {
+"uri" : "https://apisalesdemo2.successfactors.eu/odata/v2/User('952324')/userIdOfTimeCollectorNav"
+}
+}, "userIdOfSpotAwardNav" : {
+"__deferred" : {
+"uri" : "https://apisalesdemo2.successfactors.eu/odata/v2/User('952324')/userIdOfSpotAwardNav"
+}
+}, "userIdOfEmployeeTimeGroupNav" : {
+"__deferred" : {
+"uri" : "https://apisalesdemo2.successfactors.eu/odata/v2/User('952324')/userIdOfEmployeeTimeGroupNav"
+}
+}, "userIdOfExternalAllowanceNav" : {
+"__deferred" : {
+"uri" : "https://apisalesdemo2.successfactors.eu/odata/v2/User('952324')/userIdOfExternalAllowanceNav"
+}
+}, "workerIdOfBenefitsExceptionNav" : {
+"__deferred" : {
+"uri" : "https://apisalesdemo2.successfactors.eu/odata/v2/User('952324')/workerIdOfBenefitsExceptionNav"
+}
+}, "benchStrengthNav" : {
+"__deferred" : {
+"uri" : "https://apisalesdemo2.successfactors.eu/odata/v2/User('952324')/benchStrengthNav"
+}
+}, "manager" : {
+"__deferred" : {
+"uri" : "https://apisalesdemo2.successfactors.eu/odata/v2/User('952324')/manager"
+}
+}, "userSysIdOfWorkOrderNav" : {
+"__deferred" : {
+"uri" : "https://apisalesdemo2.successfactors.eu/odata/v2/User('952324')/userSysIdOfWorkOrderNav"
+}
+}, "impactOfLossNav" : {
+"__deferred" : {
+"uri" : "https://apisalesdemo2.successfactors.eu/odata/v2/User('952324')/impactOfLossNav"
+}
+}, "externalCodeOfcust_RecruitInterviewJPNav" : {
+"__deferred" : {
+"uri" : "https://apisalesdemo2.successfactors.eu/odata/v2/User('952324')/externalCodeOfcust_RecruitInterviewJPNav"
+}
+}, "userIdOfAccrualCalculationBaseNav" : {
+"__deferred" : {
+"uri" : "https://apisalesdemo2.successfactors.eu/odata/v2/User('952324')/userIdOfAccrualCalculationBaseNav"
+}
+}, "userIdOfHRISChangeLogDataReplicationNav" : {
+"__deferred" : {
+"uri" : "https://apisalesdemo2.successfactors.eu/odata/v2/User('952324')/userIdOfHRISChangeLogDataReplicationNav"
+}
+}, "externalCodeOfcust_PowerOfAttorneyNav" : {
+"__deferred" : {
+"uri" : "https://apisalesdemo2.successfactors.eu/odata/v2/User('952324')/externalCodeOfcust_PowerOfAttorneyNav"
+}
+}, "workerIdOfBenefitEnrollmentNav" : {
+"__deferred" : {
+"uri" : "https://apisalesdemo2.successfactors.eu/odata/v2/User('952324')/workerIdOfBenefitEnrollmentNav"
+}
+}, "responsibleOfONB2ProcessUserTaskNav" : {
+"__deferred" : {
+"uri" : "https://apisalesdemo2.successfactors.eu/odata/v2/User('952324')/responsibleOfONB2ProcessUserTaskNav"
+}
+}, "atsUserIdOfONB2ProcessTriggerNav" : {
+"__deferred" : {
+"uri" : "https://apisalesdemo2.successfactors.eu/odata/v2/User('952324')/atsUserIdOfONB2ProcessTriggerNav"
+}
+}, "nominationNav" : {
+"__deferred" : {
+"uri" : "https://apisalesdemo2.successfactors.eu/odata/v2/User('952324')/nominationNav"
+}
+}, "submittedByOfEmployeeTimeSheetNav" : {
+"__deferred" : {
+"uri" : "https://apisalesdemo2.successfactors.eu/odata/v2/User('952324')/submittedByOfEmployeeTimeSheetNav"
+}
+}, "reasonForLeavingNav" : {
+"__deferred" : {
+"uri" : "https://apisalesdemo2.successfactors.eu/odata/v2/User('952324')/reasonForLeavingNav"
+}
+}, "userIdOfExternalTimeDataNav" : {
+"__deferred" : {
+"uri" : "https://apisalesdemo2.successfactors.eu/odata/v2/User('952324')/userIdOfExternalTimeDataNav"
+}
+}, "lastNudgedByOfONB2BuddyActivityNav" : {
+"__deferred" : {
+"uri" : "https://apisalesdemo2.successfactors.eu/odata/v2/User('952324')/lastNudgedByOfONB2BuddyActivityNav"
+}
+}, "workerIdOfBenefitEmployeeOptoutRequestsNav" : {
+"__deferred" : {
+"uri" : "https://apisalesdemo2.successfactors.eu/odata/v2/User('952324')/workerIdOfBenefitEmployeeOptoutRequestsNav"
+}
+}, "customManager" : {
+"__deferred" : {
+"uri" : "https://apisalesdemo2.successfactors.eu/odata/v2/User('952324')/customManager"
+}
+}, "managerOfONB2ProcessNav" : {
+"__deferred" : {
+"uri" : "https://apisalesdemo2.successfactors.eu/odata/v2/User('952324')/managerOfONB2ProcessNav"
+}
+}, "workOrderOwnerIdOfWorkOrderNav" : {
+"__deferred" : {
+"uri" : "https://apisalesdemo2.successfactors.eu/odata/v2/User('952324')/workOrderOwnerIdOfWorkOrderNav"
+}
+}, "cust_attendGrievanceCommOfcust_grievancesNav" : {
+"__deferred" : {
+"uri" : "https://apisalesdemo2.successfactors.eu/odata/v2/User('952324')/cust_attendGrievanceCommOfcust_grievancesNav"
+}
+}, "usersSysIdOfEmpCostDistributionNav" : {
+"__deferred" : {
+"uri" : "https://apisalesdemo2.successfactors.eu/odata/v2/User('952324')/usersSysIdOfEmpCostDistributionNav"
+}
+}, "approverOfAdvanceNav" : {
+"__deferred" : {
+"uri" : "https://apisalesdemo2.successfactors.eu/odata/v2/User('952324')/approverOfAdvanceNav"
+}
+}, "costCenterManagerOfFOCostCenterNav" : {
+"__deferred" : {
+"uri" : "https://apisalesdemo2.successfactors.eu/odata/v2/User('952324')/costCenterManagerOfFOCostCenterNav"
+}
+}, "userIdOfTimeContainerNav" : {
+"__deferred" : {
+"uri" : "https://apisalesdemo2.successfactors.eu/odata/v2/User('952324')/userIdOfTimeContainerNav"
+}
+}, "sysSourceNav" : {
+"__deferred" : {
+"uri" : "https://apisalesdemo2.successfactors.eu/odata/v2/User('952324')/sysSourceNav"
+}
+}, "secondReports" : {
+"__deferred" : {
+"uri" : "https://apisalesdemo2.successfactors.eu/odata/v2/User('952324')/secondReports"
+}
+}, "externalCodeOfcust_auth_signNav" : {
+"__deferred" : {
+"uri" : "https://apisalesdemo2.successfactors.eu/odata/v2/User('952324')/externalCodeOfcust_auth_signNav"
+}
+}, "menteeOfMentoringProgramMatchedParticipantNav" : {
+"__deferred" : {
+"uri" : "https://apisalesdemo2.successfactors.eu/odata/v2/User('952324')/menteeOfMentoringProgramMatchedParticipantNav"
+}
+}, "userIdOfTimeRecordingNav" : {
+"__deferred" : {
+"uri" : "https://apisalesdemo2.successfactors.eu/odata/v2/User('952324')/userIdOfTimeRecordingNav"
+}
+}, "userSysIdOfOneTimeDeductionNav" : {
+"__deferred" : {
+"uri" : "https://apisalesdemo2.successfactors.eu/odata/v2/User('952324')/userSysIdOfOneTimeDeductionNav"
+}
+}, "userSysIdOfRecurringDeductionNav" : {
+"__deferred" : {
+"uri" : "https://apisalesdemo2.successfactors.eu/odata/v2/User('952324')/userSysIdOfRecurringDeductionNav"
+}
+}, "workerOfPaymentInformationV3Nav" : {
+"__deferred" : {
+"uri" : "https://apisalesdemo2.successfactors.eu/odata/v2/User('952324')/workerOfPaymentInformationV3Nav"
+}
+}, "empInfo" : {
+"__deferred" : {
+"uri" : "https://apisalesdemo2.successfactors.eu/odata/v2/User('952324')/empInfo"
+}
+}, "usersSysIdOfSecondaryAssignmentsItemNav" : {
+"__deferred" : {
+"uri" : "https://apisalesdemo2.successfactors.eu/odata/v2/User('952324')/usersSysIdOfSecondaryAssignmentsItemNav"
+}
+}, "userIdOfEmployeePayrollRunResultsNav" : {
+"__deferred" : {
+"uri" : "https://apisalesdemo2.successfactors.eu/odata/v2/User('952324')/userIdOfEmployeePayrollRunResultsNav"
+}
+}, "externalCodeOfcust_HEALTH_STATUS_TRACKINGNav" : {
+"__deferred" : {
+"uri" : "https://apisalesdemo2.successfactors.eu/odata/v2/User('952324')/externalCodeOfcust_HEALTH_STATUS_TRACKINGNav"
+}
+}, "buddyUserOfONB2BuddyActivityNav" : {
+"__deferred" : {
+"uri" : "https://apisalesdemo2.successfactors.eu/odata/v2/User('952324')/buddyUserOfONB2BuddyActivityNav"
+}
+}, "userIdOfTimeAccountNav" : {
+"__deferred" : {
+"uri" : "https://apisalesdemo2.successfactors.eu/odata/v2/User('952324')/userIdOfTimeAccountNav"
+}
+}, "mentorOfMentoringProgramMatchedParticipantNav" : {
+"__deferred" : {
+"uri" : "https://apisalesdemo2.successfactors.eu/odata/v2/User('952324')/mentorOfMentoringProgramMatchedParticipantNav"
+}
+}, "userIdOfBudgetGroupNav" : {
+"__deferred" : {
+"uri" : "https://apisalesdemo2.successfactors.eu/odata/v2/User('952324')/userIdOfBudgetGroupNav"
+}
+}, "completedByOfONB2EquipmentActivityNav" : {
+"__deferred" : {
+"uri" : "https://apisalesdemo2.successfactors.eu/odata/v2/User('952324')/completedByOfONB2EquipmentActivityNav"
+}
+}, "externalCodeOfSkillProfileNav" : {
+"__deferred" : {
+"uri" : "https://apisalesdemo2.successfactors.eu/odata/v2/User('952324')/externalCodeOfSkillProfileNav"
+}
+}, "usersSysIdOfEmployeeDataReplicationElementNav" : {
+"__deferred" : {
+"uri" : "https://apisalesdemo2.successfactors.eu/odata/v2/User('952324')/usersSysIdOfEmployeeDataReplicationElementNav"
+}
+}, "headOfUnitOfFODivisionNav" : {
+"__deferred" : {
+"uri" : "https://apisalesdemo2.successfactors.eu/odata/v2/User('952324')/headOfUnitOfFODivisionNav"
+}
+}, "assignedAddSupervisorOfApprenticeNav" : {
+"__deferred" : {
+"uri" : "https://apisalesdemo2.successfactors.eu/odata/v2/User('952324')/assignedAddSupervisorOfApprenticeNav"
+}
+}, "workerIdOfBenefitEventProcessingLogNav" : {
+"__deferred" : {
+"uri" : "https://apisalesdemo2.successfactors.eu/odata/v2/User('952324')/workerIdOfBenefitEventProcessingLogNav"
+}
+}, "assigneeUserIdOfDomainEventAlertNav" : {
+"__deferred" : {
+"uri" : "https://apisalesdemo2.successfactors.eu/odata/v2/User('952324')/assigneeUserIdOfDomainEventAlertNav"
+}
+}, "userOfChallengeInvitationNav" : {
+"__deferred" : {
+"uri" : "https://apisalesdemo2.successfactors.eu/odata/v2/User('952324')/userOfChallengeInvitationNav"
+}
+}, "responsibleUserOfONB2EquipmentActivityResponsibleNav" : {
+"__deferred" : {
+"uri" : "https://apisalesdemo2.successfactors.eu/odata/v2/User('952324')/responsibleUserOfONB2EquipmentActivityResponsibleNav"
+}
+}, "externalCodeOfcust_counselling_reqNav" : {
+"__deferred" : {
+"uri" : "https://apisalesdemo2.successfactors.eu/odata/v2/User('952324')/externalCodeOfcust_counselling_reqNav"
+}
+}, "reloWillingNav" : {
+"__deferred" : {
+"uri" : "https://apisalesdemo2.successfactors.eu/odata/v2/User('952324')/reloWillingNav"
+}
+}, "customReports" : {
+"__deferred" : {
+"uri" : "https://apisalesdemo2.successfactors.eu/odata/v2/User('952324')/customReports"
+}
+}, "completedByOfONB2ProcessUserTaskNav" : {
+"__deferred" : {
+"uri" : "https://apisalesdemo2.successfactors.eu/odata/v2/User('952324')/completedByOfONB2ProcessUserTaskNav"
+}
+}, "delegateeOfAutoDelegateDetailNav" : {
+"__deferred" : {
+"uri" : "https://apisalesdemo2.successfactors.eu/odata/v2/User('952324')/delegateeOfAutoDelegateDetailNav"
+}
+}, "completedByOfONB2BuddyActivityNav" : {
+"__deferred" : {
+"uri" : "https://apisalesdemo2.successfactors.eu/odata/v2/User('952324')/completedByOfONB2BuddyActivityNav"
+}
+}, "subjectUserOfAssignedComplianceFormNav" : {
+"__deferred" : {
+"uri" : "https://apisalesdemo2.successfactors.eu/odata/v2/User('952324')/subjectUserOfAssignedComplianceFormNav"
+}
+}, "cust_unionRepOfcust_ProgressiveDisciplinaryActionNav" : {
+"__deferred" : {
+"uri" : "https://apisalesdemo2.successfactors.eu/odata/v2/User('952324')/cust_unionRepOfcust_ProgressiveDisciplinaryActionNav"
+}
+}, "cust_mngrRep2Ofcust_grievancesNav" : {
+"__deferred" : {
+"uri" : "https://apisalesdemo2.successfactors.eu/odata/v2/User('952324')/cust_mngrRep2Ofcust_grievancesNav"
+}
+}, "hr" : {
+"__deferred" : {
+"uri" : "https://apisalesdemo2.successfactors.eu/odata/v2/User('952324')/hr"
+}
+}, "headOfUnitOfFOBusinessUnitNav" : {
+"__deferred" : {
+"uri" : "https://apisalesdemo2.successfactors.eu/odata/v2/User('952324')/headOfUnitOfFOBusinessUnitNav"
+}
+}, "workerIdOfBenefitEmployeeClaimNav" : {
+"__deferred" : {
+"uri" : "https://apisalesdemo2.successfactors.eu/odata/v2/User('952324')/workerIdOfBenefitEmployeeClaimNav"
+}
+}, "responsibleUserOfONB2ProcessResponsibleNav" : {
+"__deferred" : {
+"uri" : "https://apisalesdemo2.successfactors.eu/odata/v2/User('952324')/responsibleUserOfONB2ProcessResponsibleNav"
+}
+}, "workerIdOfACAReportingInformationNav" : {
+"__deferred" : {
+"uri" : "https://apisalesdemo2.successfactors.eu/odata/v2/User('952324')/workerIdOfACAReportingInformationNav"
+}
+}, "responsibleUserOfONB2BuddyActivityResponsibleNav" : {
+"__deferred" : {
+"uri" : "https://apisalesdemo2.successfactors.eu/odata/v2/User('952324')/responsibleUserOfONB2BuddyActivityResponsibleNav"
+}
+}, "subjectUserOfONB2ProcessUserTaskNav" : {
+"__deferred" : {
+"uri" : "https://apisalesdemo2.successfactors.eu/odata/v2/User('952324')/subjectUserOfONB2ProcessUserTaskNav"
+}
+}, "userIdOfTimeAccountSnapshotNav" : {
+"__deferred" : {
+"uri" : "https://apisalesdemo2.successfactors.eu/odata/v2/User('952324')/userIdOfTimeAccountSnapshotNav"
+}
+}, "userIdOfTimeAccountPayoutNav" : {
+"__deferred" : {
+"uri" : "https://apisalesdemo2.successfactors.eu/odata/v2/User('952324')/userIdOfTimeAccountPayoutNav"
+}
+}, "completedByOfComplianceProcessTaskNav" : {
+"__deferred" : {
+"uri" : "https://apisalesdemo2.successfactors.eu/odata/v2/User('952324')/completedByOfComplianceProcessTaskNav"
+}
+}, "titleNav" : {
+"__deferred" : {
+"uri" : "https://apisalesdemo2.successfactors.eu/odata/v2/User('952324')/titleNav"
+}
+}, "workerIdOfBenefitsIntegrationOneTimeInfoNav" : {
+"__deferred" : {
+"uri" : "https://apisalesdemo2.successfactors.eu/odata/v2/User('952324')/workerIdOfBenefitsIntegrationOneTimeInfoNav"
+}
+}, "userIdOfTemporaryTimeInformationNav" : {
+"__deferred" : {
+"uri" : "https://apisalesdemo2.successfactors.eu/odata/v2/User('952324')/userIdOfTemporaryTimeInformationNav"
+}
+}, "userIdOfPayrollDataMaintenanceTaskNav" : {
+"__deferred" : {
+"uri" : "https://apisalesdemo2.successfactors.eu/odata/v2/User('952324')/userIdOfPayrollDataMaintenanceTaskNav"
+}
+}, "rehireUserOfONB2ProcessTriggerNav" : {
+"__deferred" : {
+"uri" : "https://apisalesdemo2.successfactors.eu/odata/v2/User('952324')/rehireUserOfONB2ProcessTriggerNav"
+}
+}, "approvedByOfEmployeeTimeSheetNav" : {
+"__deferred" : {
+"uri" : "https://apisalesdemo2.successfactors.eu/odata/v2/User('952324')/approvedByOfEmployeeTimeSheetNav"
+}
+}, "externalNameOfcust_sapSensitiveDevNav" : {
+"__deferred" : {
+"uri" : "https://apisalesdemo2.successfactors.eu/odata/v2/User('952324')/externalNameOfcust_sapSensitiveDevNav"
+}
+}, "directReports" : {
+"__deferred" : {
+"uri" : "https://apisalesdemo2.successfactors.eu/odata/v2/User('952324')/directReports"
+}
+}, "externalCodeOfcust_ProgressiveDisciplinaryActionNav" : {
+"__deferred" : {
+"uri" : "https://apisalesdemo2.successfactors.eu/odata/v2/User('952324')/externalCodeOfcust_ProgressiveDisciplinaryActionNav"
+}
+}, "initiatedByOfPayrollDataMaintenanceTaskNav" : {
+"__deferred" : {
+"uri" : "https://apisalesdemo2.successfactors.eu/odata/v2/User('952324')/initiatedByOfPayrollDataMaintenanceTaskNav"
+}
+}, "externalCodeOfcust_EmpLetterRequestNav" : {
+"__deferred" : {
+"uri" : "https://apisalesdemo2.successfactors.eu/odata/v2/User('952324')/externalCodeOfcust_EmpLetterRequestNav"
+}
+}, "personKeyNav" : {
+"__deferred" : {
+"uri" : "https://apisalesdemo2.successfactors.eu/odata/v2/User('952324')/personKeyNav"
+}
+}, "usersSysIdOfEmployeeDataReplicationConfirmationNav" : {
+"__deferred" : {
+"uri" : "https://apisalesdemo2.successfactors.eu/odata/v2/User('952324')/usersSysIdOfEmployeeDataReplicationConfirmationNav"
+}
+}, "userIdOfEmployeeTimeSheetNav" : {
+"__deferred" : {
+"uri" : "https://apisalesdemo2.successfactors.eu/odata/v2/User('952324')/userIdOfEmployeeTimeSheetNav"
+}
+}, "userSysIdOfNonRecurringPaymentNav" : {
+"__deferred" : {
+"uri" : "https://apisalesdemo2.successfactors.eu/odata/v2/User('952324')/userSysIdOfNonRecurringPaymentNav"
+}
+}, "cust_useridOfcust_DayforceReplicationLogNav" : {
+"__deferred" : {
+"uri" : "https://apisalesdemo2.successfactors.eu/odata/v2/User('952324')/cust_useridOfcust_DayforceReplicationLogNav"
+}
+}, "declinedByOfComplianceDocumentFlowNav" : {
+"__deferred" : {
+"uri" : "https://apisalesdemo2.successfactors.eu/odata/v2/User('952324')/declinedByOfComplianceDocumentFlowNav"
+}
+}, "companyRepresentativeOfLegalEntitySAUNav" : {
+"__deferred" : {
+"uri" : "https://apisalesdemo2.successfactors.eu/odata/v2/User('952324')/companyRepresentativeOfLegalEntitySAUNav"
+}
+}, "competencyRatingNav" : {
+"__deferred" : {
+"uri" : "https://apisalesdemo2.successfactors.eu/odata/v2/User('952324')/competencyRatingNav"
+}
+}, "externalCodeOfcust_SportNav" : {
+"__deferred" : {
+"uri" : "https://apisalesdemo2.successfactors.eu/odata/v2/User('952324')/externalCodeOfcust_SportNav"
+}
+}, "externalCodeOfcust_test111Nav" : {
+"__deferred" : {
+"uri" : "https://apisalesdemo2.successfactors.eu/odata/v2/User('952324')/externalCodeOfcust_test111Nav"
+}
+}, "workerIdOfBenefitClaimAccumulationNav" : {
+"__deferred" : {
+"uri" : "https://apisalesdemo2.successfactors.eu/odata/v2/User('952324')/workerIdOfBenefitClaimAccumulationNav"
+}
+}, "workerIdOfBenefitProgramEnrollmentNav" : {
+"__deferred" : {
+"uri" : "https://apisalesdemo2.successfactors.eu/odata/v2/User('952324')/workerIdOfBenefitProgramEnrollmentNav"
+}
+}, "userPermissionsNav" : {
+"__deferred" : {
+"uri" : "https://apisalesdemo2.successfactors.eu/odata/v2/User('952324')/userPermissionsNav"
+}
+}, "externalCodeOfcust_grievancesNav" : {
+"__deferred" : {
+"uri" : "https://apisalesdemo2.successfactors.eu/odata/v2/User('952324')/externalCodeOfcust_grievancesNav"
+}
+}, "subjectUserOfComplianceFormDataNav" : {
+"__deferred" : {
+"uri" : "https://apisalesdemo2.successfactors.eu/odata/v2/User('952324')/subjectUserOfComplianceFormDataNav"
+}
+}, "assigneeUserIdOfTimeManagementAlertNav" : {
+"__deferred" : {
+"uri" : "https://apisalesdemo2.successfactors.eu/odata/v2/User('952324')/assigneeUserIdOfTimeManagementAlertNav"
+}
+}, "auditUserSysIdOfOneTimeDeductionNav" : {
+"__deferred" : {
+"uri" : "https://apisalesdemo2.successfactors.eu/odata/v2/User('952324')/auditUserSysIdOfOneTimeDeductionNav"
+}
+}, "responsibleUserOfAssignedComplianceFormNav" : {
+"__deferred" : {
+"uri" : "https://apisalesdemo2.successfactors.eu/odata/v2/User('952324')/responsibleUserOfAssignedComplianceFormNav"
+}
+}, "userOfONB2ProcessNav" : {
+"__deferred" : {
+"uri" : "https://apisalesdemo2.successfactors.eu/odata/v2/User('952324')/userOfONB2ProcessNav"
+}
+}, "restartedByOfONB2ProcessTaskNav" : {
+"__deferred" : {
+"uri" : "https://apisalesdemo2.successfactors.eu/odata/v2/User('952324')/restartedByOfONB2ProcessTaskNav"
+}
+}, "subjectUserOfComplianceDocumentFlowNav" : {
+"__deferred" : {
+"uri" : "https://apisalesdemo2.successfactors.eu/odata/v2/User('952324')/subjectUserOfComplianceDocumentFlowNav"
+}
+}, "externalCodeOfcust_ObjectwithmorethenthiryonecharactersinthecodeNav" : {
+"__deferred" : {
+"uri" : "https://apisalesdemo2.successfactors.eu/odata/v2/User('952324')/externalCodeOfcust_ObjectwithmorethenthiryonecharactersinthecodeNav"
+}
+}, "externalCodeOfcust_TestObjectNav" : {
+"__deferred" : {
+"uri" : "https://apisalesdemo2.successfactors.eu/odata/v2/User('952324')/externalCodeOfcust_TestObjectNav"
+}
+}, "userOfOnboardingInfoNav" : {
+"__deferred" : {
+"uri" : "https://apisalesdemo2.successfactors.eu/odata/v2/User('952324')/userOfOnboardingInfoNav"
+}
+}, "subjectUserIdOfActivityNav" : {
+"__deferred" : {
+"uri" : "https://apisalesdemo2.successfactors.eu/odata/v2/User('952324')/subjectUserIdOfActivityNav"
+}
+}, "userIdOfDataReplicationProxyNav" : {
+"__deferred" : {
+"uri" : "https://apisalesdemo2.successfactors.eu/odata/v2/User('952324')/userIdOfDataReplicationProxyNav"
+}
+}, "budgetHolderIdOfSpotAwardNav" : {
+"__deferred" : {
+"uri" : "https://apisalesdemo2.successfactors.eu/odata/v2/User('952324')/budgetHolderIdOfSpotAwardNav"
+}
+}, "employmentIdentityOfDRTMPurgeFreezeNav" : {
+"__deferred" : {
+"uri" : "https://apisalesdemo2.successfactors.eu/odata/v2/User('952324')/employmentIdentityOfDRTMPurgeFreezeNav"
+}
+}, "matrixManager" : {
+"__deferred" : {
+"uri" : "https://apisalesdemo2.successfactors.eu/odata/v2/User('952324')/matrixManager"
+}
+}, "externalCodeOfcust_voluntarySeparationRequestNav" : {
+"__deferred" : {
+"uri" : "https://apisalesdemo2.successfactors.eu/odata/v2/User('952324')/externalCodeOfcust_voluntarySeparationRequestNav"
+}
+}, "userIdOfPayrollMntTasksFilterNav" : {
+"__deferred" : {
+"uri" : "https://apisalesdemo2.successfactors.eu/odata/v2/User('952324')/userIdOfPayrollMntTasksFilterNav"
+}
+}, "cust_recruiterOfPositionNav" : {
+"__deferred" : {
+"uri" : "https://apisalesdemo2.successfactors.eu/odata/v2/User('952324')/cust_recruiterOfPositionNav"
+}
+}, "salutationNav" : {
+"__deferred" : {
+"uri" : "https://apisalesdemo2.successfactors.eu/odata/v2/User('952324')/salutationNav"
+}
+}, "userOfComplianceProcessNav" : {
+"__deferred" : {
+"uri" : "https://apisalesdemo2.successfactors.eu/odata/v2/User('952324')/userOfComplianceProcessNav"
+}
+}, "userIdOfEmployeeTimeNav" : {
+"__deferred" : {
+"uri" : "https://apisalesdemo2.successfactors.eu/odata/v2/User('952324')/userIdOfEmployeeTimeNav"
+}
+}, "externalCodeOfcust_NextIdGen_BOSCHNav" : {
+"__deferred" : {
+"uri" : "https://apisalesdemo2.successfactors.eu/odata/v2/User('952324')/externalCodeOfcust_NextIdGen_BOSCHNav"
+}
+}, "workerIdOfBenefitEnrollmentGroupNav" : {
+"__deferred" : {
+"uri" : "https://apisalesdemo2.successfactors.eu/odata/v2/User('952324')/workerIdOfBenefitEnrollmentGroupNav"
+}
+}, "cust_unionRep2Ofcust_grievancesNav" : {
+"__deferred" : {
+"uri" : "https://apisalesdemo2.successfactors.eu/odata/v2/User('952324')/cust_unionRep2Ofcust_grievancesNav"
+}
+}, "contactEmployeeIdOfBenefitContactNav" : {
+"__deferred" : {
+"uri" : "https://apisalesdemo2.successfactors.eu/odata/v2/User('952324')/contactEmployeeIdOfBenefitContactNav"
+}
+}, "eventPublishedByOfBenefitEventProcessingLogNav" : {
+"__deferred" : {
+"uri" : "https://apisalesdemo2.successfactors.eu/odata/v2/User('952324')/eventPublishedByOfBenefitEventProcessingLogNav"
+}
+}, "userIdOfSpotAwardBudgetNav" : {
+"__deferred" : {
+"uri" : "https://apisalesdemo2.successfactors.eu/odata/v2/User('952324')/userIdOfSpotAwardBudgetNav"
+}
+}, "completedByOfONB2ProcessTaskNav" : {
+"__deferred" : {
+"uri" : "https://apisalesdemo2.successfactors.eu/odata/v2/User('952324')/completedByOfONB2ProcessTaskNav"
+}
+}, "subjectUserOfONB2BuddyActivityNav" : {
+"__deferred" : {
+"uri" : "https://apisalesdemo2.successfactors.eu/odata/v2/User('952324')/subjectUserOfONB2BuddyActivityNav"
+}
+}, "cust_unionRep1Ofcust_grievancesNav" : {
+"__deferred" : {
+"uri" : "https://apisalesdemo2.successfactors.eu/odata/v2/User('952324')/cust_unionRep1Ofcust_grievancesNav"
+}
+}, "headOfUnitOfFODepartmentNav" : {
+"__deferred" : {
+"uri" : "https://apisalesdemo2.successfactors.eu/odata/v2/User('952324')/headOfUnitOfFODepartmentNav"
+}
+}, "userIdOfSpotAwardRedemptionNav" : {
+"__deferred" : {
+"uri" : "https://apisalesdemo2.successfactors.eu/odata/v2/User('952324')/userIdOfSpotAwardRedemptionNav"
+}
+}, "hrReports" : {
+"__deferred" : {
+"uri" : "https://apisalesdemo2.successfactors.eu/odata/v2/User('952324')/hrReports"
+}
+}, "userIdOfAllowanceRecordingNav" : {
+"__deferred" : {
+"uri" : "https://apisalesdemo2.successfactors.eu/odata/v2/User('952324')/userIdOfAllowanceRecordingNav"
+}
+}, "externalCodeOfcust_COVID_19_VACCINE_TRACKINGNav" : {
+"__deferred" : {
+"uri" : "https://apisalesdemo2.successfactors.eu/odata/v2/User('952324')/externalCodeOfcust_COVID_19_VACCINE_TRACKINGNav"
+}
+}, "riskOfLossNav" : {
+"__deferred" : {
+"uri" : "https://apisalesdemo2.successfactors.eu/odata/v2/User('952324')/riskOfLossNav"
+}
+}, "subjectUserOfComplianceProcessTaskNav" : {
+"__deferred" : {
+"uri" : "https://apisalesdemo2.successfactors.eu/odata/v2/User('952324')/subjectUserOfComplianceProcessTaskNav"
+}
+}, "ownerOfTalentPoolNav" : {
+"__deferred" : {
+"uri" : "https://apisalesdemo2.successfactors.eu/odata/v2/User('952324')/ownerOfTalentPoolNav"
+}
+}, "subjectUserOfONB2DataCollectionUserConfigNav" : {
+"__deferred" : {
+"uri" : "https://apisalesdemo2.successfactors.eu/odata/v2/User('952324')/subjectUserOfONB2DataCollectionUserConfigNav"
+}
+}, "restartedByOfONB2ProcessUserTaskNav" : {
+"__deferred" : {
+"uri" : "https://apisalesdemo2.successfactors.eu/odata/v2/User('952324')/restartedByOfONB2ProcessUserTaskNav"
+}
+}, "passiveUserOfMentoringProgramMatchedParticipantNav" : {
+"__deferred" : {
+"uri" : "https://apisalesdemo2.successfactors.eu/odata/v2/User('952324')/passiveUserOfMentoringProgramMatchedParticipantNav"
+}
+}, "userIdOfPositionRightToReturnNav" : {
+"__deferred" : {
+"uri" : "https://apisalesdemo2.successfactors.eu/odata/v2/User('952324')/userIdOfPositionRightToReturnNav"
+}
+}, "decentralTrainerUserIdOfDepartmentApprenticeDetailNav" : {
+"__deferred" : {
+"uri" : "https://apisalesdemo2.successfactors.eu/odata/v2/User('952324')/decentralTrainerUserIdOfDepartmentApprenticeDetailNav"
+}
+}, "userSysIdOfAdvancesAccumulationNav" : {
+"__deferred" : {
+"uri" : "https://apisalesdemo2.successfactors.eu/odata/v2/User('952324')/userSysIdOfAdvancesAccumulationNav"
+}
+}, "workerIdOfBenefitEmployeeLifeEventDeclarationFormNav" : {
+"__deferred" : {
+"uri" : "https://apisalesdemo2.successfactors.eu/odata/v2/User('952324')/workerIdOfBenefitEmployeeLifeEventDeclarationFormNav"
+}
+}, "userSysIdOfItDeclarationNav" : {
+"__deferred" : {
+"uri" : "https://apisalesdemo2.successfactors.eu/odata/v2/User('952324')/userSysIdOfItDeclarationNav"
+}
+}, "externalCodeOfcust_CommutingAllowanceNav" : {
+"__deferred" : {
+"uri" : "https://apisalesdemo2.successfactors.eu/odata/v2/User('952324')/externalCodeOfcust_CommutingAllowanceNav"
+}
+}, "usersSysIdOfHireDateChangeNav" : {
+"__deferred" : {
+"uri" : "https://apisalesdemo2.successfactors.eu/odata/v2/User('952324')/usersSysIdOfHireDateChangeNav"
+}
+}
+}
+]
+}
+}
